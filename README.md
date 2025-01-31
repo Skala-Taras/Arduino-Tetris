@@ -1,14 +1,14 @@
 Overview
+
     This code implements a Tetris game using an 8x16 LED matrix for gameplay visualization and an SSD1306 OLED display for score tracking. It supports piece rotation, movement, scoring, and high score persistence     via EEPROM.
 
 ![photo_5253834361789345647_y](https://github.com/user-attachments/assets/aad1ccfc-239b-43e1-b1ee-3c95156c076b)
 
-![Uploading photo_5253834361789345647_y.jpg…]()
-
 Hardware Setup
+
     LED Matrix: Uses 2 MAX72xx panels (8x8 each) connected via SPI (DIN 12, CLK 11, CS 10)
 
-OLED Display: 128x64 SSD1306 via I2C
+    OLED Display: 128x64 SSD1306 via I2C
 
 Controls:
     
@@ -23,6 +23,7 @@ Controls:
     PIN 7: End Game
 
 Global Variables
+
     gameBoard[16]: 16x8 grid representing game state
     
     currentPieceType: Active tetromino type (0-6)
@@ -34,6 +35,7 @@ Global Variables
     points/highScore: Game scoring system
 
 Key Functions
+
     1. Core Game Functions
     fixingFigureOnBoard(): Merges landed piece with game board
     
@@ -67,12 +69,14 @@ Key Functions
         loop(): Primary Arduino loop running game logic
 
 Tetromino Definitions
+
     7 classic pieces stored as 4x4 bit patterns with rotation variants:
     
     I, O, T, L, J, S, Z
     Each piece has 4 rotation states (0-3)
 
 Features
+
     Progressive difficulty (speed increases with score)
     
     EEPROM high score storage
