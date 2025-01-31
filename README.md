@@ -1,6 +1,9 @@
 Overview
     This code implements a Tetris game using an 8x16 LED matrix for gameplay visualization and an SSD1306 OLED display for score tracking. It supports piece rotation, movement, scoring, and high score persistence     via EEPROM.
 
+![Uploading photo_5253834361789345647_y.jpg…]()
+
+
 Hardware Setup
     LED Matrix: Uses 2 MAX72xx panels (8x8 each) connected via SPI (DIN 12, CLK 11, CS 10)
 
